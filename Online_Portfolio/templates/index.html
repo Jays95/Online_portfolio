@@ -1187,8 +1187,11 @@
 <section id="home" class="hero-section">
   <div class="particles" id="particles"></div>
   <div class="hero-content">
-    <img src="jayson-ranck.jpg" alt="Profile Picture" class="profile-pic" loading="eager" width="150" height="150" data-parallax="0.5"/>
     
+    <!-- Profile Image with Circular Style -->
+    <img src="{{ url_for('static', filename='images/jayson-ranck.jpg') }}" alt="Profile image" class="profile-pic">
+
+    <!-- AI Animation -->
     <img
       src="https://scitechdaily.com/images/AI-Technology-Creation-Concept.gif"
       alt="3D Sphere Animation"
@@ -1198,7 +1201,8 @@
       height="300"
       data-parallax="0.5"
     />
-    
+
+    <!-- Headline and CTA -->
     <h1 class="glitch" data-text="Jayson Ranck">Jayson Ranck</h1>
     <div class="subtitle">Flask | AI Developer | Problem Solver</div>
     <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; transform: translateZ(10px); color: #ffffff; z-index: 30;">
@@ -1207,6 +1211,25 @@
     <a href="#projects" class="cta-button glow ripple">Explore My Work</a>
   </div>
 </section>
+
+<!-- Style Block (place this in <head> or external CSS file) -->
+<style>
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+  }
+
+  .profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  }
+</style>
 
   <!-- About Section -->
   <section id="about" class="section about-section">
@@ -1696,8 +1719,4 @@
     });
   </script>
 </body>
-
 </html>
-
-
-
